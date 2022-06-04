@@ -35,7 +35,7 @@ void __fastcall PlayLayer::hkUpdate(gd::PlayLayer* self, void* edx, float delta)
 
     if (checkbox->get())
     {
-        if (round(self->m_levelLength / 100 * spinner->get()) == round(self->m_pPlayer1->getPositionX()))
+        if (round(self->m_levelLength / 100 * spinner->get()) >= round(self->m_pPlayer1->getPositionX()))
         {
             resetLevel(self);
         }
